@@ -1,0 +1,13 @@
+import inscripciones.*
+
+describe "Punto1" {
+
+  test "Registrar materia aprobada" {
+    const objetos1 = new Materia(nombre = "Objetos 1")
+    const javier = new Estudiante()
+    
+    javier.aprobar(objetos1, 7)
+
+    assert.doesNotThrowException({javier.validarSiAproboMateria(objetos1)})  
+    }
+}
